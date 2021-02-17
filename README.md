@@ -1,2 +1,2 @@
 # node-basic-app
-A repo fpr basic node concepts
+A repo for basic node concepts
