@@ -1,0 +1,41 @@
+NodeJS
+---------
+Node.JS is an open source server-side runtime environment 
+built on chrome's v8 javascript engine.
+
+**** Nodejs Uses v8 javascript Execution engine ****
+
+V8 from Google is the most used JavaScript engine.
+SpiderMonkey is developed by Mozilla for use in Firefox.
+JavaScriptCore is Apple's engine for its Safari browser.
+Chakra is the JavaScript engine of the Internet Explorer browser.
+
+Node.js can be used to build different types of applications 
+such as command-line applications, web applications. real time
+chat applications, Rest API server etc.
+
+Advantages
+----------
+1. It uses javascript to buid entire server side application 
+2. Asynchronous by default, so it perfoems faster
+3. cross-platform framework that run on windows, Mac or Linux
+
+Datatypes
+---------
+String, Number, Boolean, undefined, null, object, function
+
+Process object
+--------------
+Each node.js script runs in a process. It includes process 
+object to get all the information about the current process 
+of Node.Js Application.
+
+process.execpath
+prcoess.pid
+process.cwd 
+
+Modules
+---------
+1. Core Modules  - http, url, querystring, path
+2. Local Modules - which we create on our own
+3. Third-Party Modules - express, nodemon, body-parser, etc..
