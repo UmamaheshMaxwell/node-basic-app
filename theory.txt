@@ -39,3 +39,21 @@ Modules
 1. Core Modules  - http, url, querystring, path
 2. Local Modules - which we create on our own
 3. Third-Party Modules - express, nodemon, body-parser, etc..
+
+Module.exports
+---------------
+It is a special object which is included in every javascript file 
+in the node.js application by default
+
+module - It is a variable that represents the current module
+
+exports - It is an object that will be exported by a module
+
+What ever we assign to module.exports will be exposed as a module
+
+File System
+-----------
+Node.JS includes fs module to access physical files
+
+fs module is responsible for all the Asynchronous or Synchronous file IO operations
+
