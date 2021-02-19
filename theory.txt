@@ -57,3 +57,33 @@ Node.JS includes fs module to access physical files
 
 fs module is responsible for all the Asynchronous or Synchronous file IO operations
 
+
+Node.Js Event Emitter
+---------------------
+NodeJS allows us to create and handle custom events easily by using events modules
+
+event module includes EventEmitter class which can be used to handle custom events
+
+ExpressJS
+----------
+Express JS is a webframework for NodeJS
+
+It makes web developement fast and easily
+
+Advantages
+---------
+1. Easy to configure
+2. Allows us to define routes
+3. Allows to create REst API server
+4. Easy to connect to databases such as mongoDB, Redia, mySQL
+
+Server Static Resources
+-----------------------
+It is easy to serve static files using built-in function whic is express.static
+
+console.log(path.join(__dirname, 'public'))
+app.use(express.static(path.join(__dirname, 'public')))
+
+path
+-------
+It is core module of NodeJS, which will help us to join the path
