@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 const router = express.Router();
 
 router.get("/", function(req, res){
-    res.json("Dwefault Endpoint")
+    res.json("Default Endpoint")
 })
 
 router.get("/student", function(req, res){
@@ -82,6 +82,29 @@ router.put("/student/:id", function(req, res){
         console.log(updateQuery)
 
         request.query(updateQuery, (err, data) => {
+            if(err){
+                console.log(err)
+            }
+
+            res.json(data);
+        })
+    })
+})
+
+router.delete("/student/:id", function(req, res){
+
+    var studentID = req.params.id
+
+    sql.connect(dbConfig, (err) => {
+        if(err){
+            console.log(err);
+        }
+
+        const request = new sql.Request();
+
+        const deleteQuery = `delete from Student where id= ${studentID}`
+
+        request.query(deleteQuery, (err, data) => {
             if(err){
                 console.log(err)
             }
