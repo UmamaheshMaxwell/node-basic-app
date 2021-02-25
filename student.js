@@ -42,6 +42,29 @@ router.get("/student", function(req, res){
     })
 })
 
+router.get("/student/:id", function(req, res){
+
+    const studentId = req.params.id
+
+    sql.connect(dbConfig, (err) => {
+        if(err){
+            console.log(err);
+        }
+
+        const request = new sql.Request();
+
+        const selectQuery = `Select * from Student Where id = ${studentId}`
+
+        request.query(selectQuery, (err, data) => {
+            if(err){
+                console.log(err)
+            }
+
+            res.json(data.recordset);
+        })
+    })
+})
+
 router.post("/student", function(req, res){
 
     var data = req.body;

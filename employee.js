@@ -29,6 +29,16 @@ router.get("/employee", function(req, res){
     })
 })
 
+router.get("/employee/:id", function(req, res){
+    var empId = req.params.id
+    EmployeeModel.getEmployeeById(empId, function(err, data){
+        if(err){
+            throw err
+        }
+        res.json(data)
+    })
+})
+
 router.post("/employee", function(req, res){
     var empObj = req.body;
     console.log(empObj)
@@ -52,6 +62,15 @@ router.put("/employee/:id", function(req, res){
     })
 })
 
+router.delete("/employee/:id", function(req, res){
+    var empId = req.params.id
+    EmployeeModel.deleteEmployee(empId, function(err, data){
+        if(err){
+            throw err;
+        }
+        res.json(data)
+    })
+})
 
 const PORT = 3001
 

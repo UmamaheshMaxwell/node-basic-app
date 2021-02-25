@@ -24,6 +24,10 @@ module.exports.getEmployee = function(callback){
     EmployeeModel.find(callback)
 }
 
+module.exports.getEmployeeById = function(id, callback){
+    EmployeeModel.findById({_id: id}, callback)
+}
+
 module.exports.createEmployee = function(employee, callback){
     EmployeeModel.create(createEmployeeJSON(employee), callback)
 }
@@ -36,6 +40,10 @@ module.exports.updateEmployee = function(id, employee, callback){
                             city: employee.city
                         }}, 
                         callback)
+}
+
+module.exports.deleteEmployee = function(id, callback){
+    EmployeeModel.remove({_id: id}, callback)
 }
 
 function createEmployeeJSON(empObj){
